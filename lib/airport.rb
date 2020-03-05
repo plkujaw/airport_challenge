@@ -1,4 +1,4 @@
-# require_relative "plane"
+require_relative "plane"
 
 class Airport
 
@@ -9,6 +9,11 @@ class Airport
   def initialize(capacity = CAPACITY)
     @capacity = capacity
     @planes = []
+  end
+
+  def take_off(plane)
+    @planes.delete(plane)
+    return "Take off succesfull"
   end
 
   def land(plane)
